@@ -49,22 +49,21 @@ app.post("/actions", function (request, response) {
   //   console.log("Request Body: " + JSON.stringify(request.body));
 
   //   console.log(request.body.queryResult.intent);
-  intent = request.body.queryResult.intent["displayName"];
+  intent = request.body.queryResult.intent["displayName"].toLowerCase();
   console.log(intent);
   try {
-    intent = request.body.queryResult.intent["displayName"];
+    scroll_direction = request.body.queryResult.parameters[
+      "scroll_direction"
+    ].toLowerCase();
   } catch (e) {}
   try {
-    scroll_direction = request.body.queryResult.parameters["scroll_direction"];
+    page = request.body.queryResult.parameters["page"].toLowerCase();
   } catch (e) {}
   try {
-    page = request.body.queryResult.parameters["page"];
-  } catch (e) {}
-  try {
-    action = request.body.queryResult.parameters["Action"];
+    action = request.body.queryResult.parameters["Action"].toLowerCase();
   } catch (e) {}
 
-  if (intent == "Key") {
+  if (intent == "key") {
     room = request.body.queryResult.parameters["number"];
     console.log(room);
     io.emit("join", room);
@@ -79,9 +78,10 @@ app.post("/actions", function (request, response) {
   }
   room = request.body.originalDetectIntentRequest.payload.user.userStorage;
   console.log(room);
-  if (intent == "Scroll") io.to(room).emit("scroll", scroll_direction);
-  else if (intent == "Navigation") io.to(room).emit("navigate", page);
-  else if (intent == "Play") io.to(room).emit("play", action);
+  if (intent == "scroll") io.to(room).emit("scroll", scroll_direction);
+  else if (intent == "navigation") io.to(room).emit("navigate", page);
+  else if (intent == "play") io.to(room).emit("play", action);
+  else if (intent == "narration") io.to(room).emit("narrate");
 
   response.end();
 });
