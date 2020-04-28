@@ -1,35 +1,23 @@
 const express = require("express");
 const socket = require("socket.io");
-const socketRedis = require("socket.io-redis");
+const bodypaser = require("body-parser");
 
 // App setup
 const app = express();
 
 const PORT = process.env.PORT || 3000;
-const REDIS_URL =
-  process.env.REDIS_URL ||
-  "redis-13021.c10.us-east-1-3.ec2.cloud.redislabs.com:13021";
-const REDIS_KEY = process.env.REDIS_KEY || "chat-socket";
-
 const server = app.listen(PORT, function () {
   console.log("listening for requests on port ", PORT);
 });
 
 // Static files
+app.use(express.json());
 app.use(express.static("public"));
 
 // Socket setup & pass server
 const io = socket(server);
-// const redisAdapter = socketRedis(REDIS_URL, { key: REDIS_KEY })
-const redisAdapter = socketRedis({
-  host:
-    process.env.REDIS_HOST ||
-    "redis-13021.c10.us-east-1-3.ec2.cloud.redislabs.com",
-  port: process.env.REDIS_PORT || 13021,
-  password: process.env.REDIS_PASS || "dhcRN7LTsgab7Na5u1X1rlAYuWNpZCyB",
-});
 
-io.adapter(redisAdapter).on("connection", (socket) => {
+io.on("connection", (socket) => {
   console.log(socket.id, "made socket connection");
 
   // Handle chat event
@@ -51,4 +39,57 @@ io.adapter(redisAdapter).on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log(`Socket ${socket.id} disconnected.`);
   });
+});
+
+app.post("/actions", function (request, response) {
+  //   let((intent = scroll_direction = page = action)) = 0;
+  var scroll_direction = 0;
+  var intent = 0;
+  var page = 0;
+  var action = 0;
+  //   console.log("Request Body: " + JSON.stringify(request.body));
+
+  //   console.log(request.body.queryResult.intent);
+  intent = request.body.queryResult.intent["displayName"];
+  console.log(intent);
+  try {
+    intent = request.body.queryResult.intent["displayName"];
+  } catch (e) {}
+  try {
+    scroll_direction = request.body.queryResult.parameters["scroll_direction"];
+  } catch (e) {}
+  try {
+    page = request.body.queryResult.parameters["page"];
+  } catch (e) {}
+  try {
+    action = request.body.queryResult.parameters["Action"];
+  } catch (e) {}
+
+  if (intent == "Key") {
+    room = request.body.queryResult.parameters["number"];
+    console.log(room);
+    io.emit("join", room);
+    data = {
+      payload: {
+        google: {
+          userStorage: JSON.stringify(room),
+        },
+      },
+    };
+    response.send(data);
+  }
+  room = request.body.originalDetectIntentRequest.payload.user.userStorage;
+  console.log(room);
+  if (intent == "Scroll" && scroll_direction)
+    io.to(room).emit("sendNews", "scroll");
+  else if (intent == "Navigation" && page == "videos")
+    io.to(room).emit("sendNews", "videos");
+  else if (intent == "Navigation" && page == "home")
+    io.to(room).emit("sendNews", "home");
+  else if (intent == "Play" && action == "play")
+    io.to(room).emit("sendNews", "play");
+  else if (intent == "Play" && action == "pause")
+    io.to(room).emit("sendNews", "pause");
+
+  response.end();
 });
