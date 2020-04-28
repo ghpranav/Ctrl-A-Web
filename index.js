@@ -79,16 +79,9 @@ app.post("/actions", function (request, response) {
   }
   room = request.body.originalDetectIntentRequest.payload.user.userStorage;
   console.log(room);
-  if (intent == "Scroll" && scroll_direction)
-    io.to(room).emit("sendNews", "scroll");
-  else if (intent == "Navigation" && page == "videos")
-    io.to(room).emit("sendNews", "videos");
-  else if (intent == "Navigation" && page == "home")
-    io.to(room).emit("sendNews", "home");
-  else if (intent == "Play" && action == "play")
-    io.to(room).emit("sendNews", "play");
-  else if (intent == "Play" && action == "pause")
-    io.to(room).emit("sendNews", "pause");
+  if (intent == "Scroll") io.to(room).emit("scroll", scroll_direction);
+  else if (intent == "Navigation") io.to(room).emit("navigate", page);
+  else if (intent == "Play") io.to(room).emit("play", action);
 
   response.end();
 });

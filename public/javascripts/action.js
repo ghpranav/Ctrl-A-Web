@@ -38,12 +38,32 @@ socket.emit("join", uid);
 document.getElementById("uid").innerHTML = "Unique ID: " + uid;
 
 // Listen for events
-socket.on("chat", function (data) {
-  feedback.innerHTML = "";
-  output.innerHTML +=
-    "<p><strong>" + data.handle + ": </strong>" + data.message + "</p>";
+socket.on("scroll", function (data) {
+  if (data == "up")
+    window.scrollBy({
+      top: -300,
+      left: 0,
+      behavior: "smooth",
+    });
+  else if (data == "down")
+    window.scrollBy({
+      top: 300, // could be negative value
+      left: 0,
+      behavior: "smooth",
+    });
 });
 
-socket.on("typing", function (data) {
-  feedback.innerHTML = "<p><em>" + data + " is typing a message...</em></p>";
+socket.on("navigate", function (data) {
+  if (data == "videos")
+    window.location = protocol + "//" + document.domain + "/videos.html";
+  else if (data == "about")
+    window.location = protocol + "//" + document.domain + "/about.html";
+  else if (data == "home")
+    window.location = protocol + "//" + document.domain + "/";
+});
+
+socket.on("play", function (data) {
+  var vid = document.getElementById("myVideo");
+  if (data == "play") vid.play();
+  else if (data == "pause") vid.play();
 });
