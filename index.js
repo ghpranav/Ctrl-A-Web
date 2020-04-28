@@ -1,6 +1,5 @@
 const express = require("express");
 const socket = require("socket.io");
-const bodypaser = require("body-parser");
 
 // App setup
 const app = express();
