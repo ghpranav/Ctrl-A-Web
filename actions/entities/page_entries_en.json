@@ -1,0 +1,25 @@
+[
+  {
+    "value": "about",
+    "synonyms": [
+      "about",
+      "about page"
+    ]
+  },
+  {
+    "value": "home",
+    "synonyms": [
+      "home",
+      "home page",
+      "index page"
+    ]
+  },
+  {
+    "value": "videos",
+    "synonyms": [
+      "videos",
+      "video page",
+      "video"
+    ]
+  }
+]

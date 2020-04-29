@@ -1,0 +1,65 @@
+{
+  "id": "02d57634-144b-4f52-be28-728707a1bcf0",
+  "parentId": "2bfa2424-b99e-476e-a0f6-36ee5c303d1c",
+  "rootParentId": "2bfa2424-b99e-476e-a0f6-36ee5c303d1c",
+  "name": "Key",
+  "auto": true,
+  "contexts": [
+    "DefaultWelcomeIntent-followup"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "DefaultWelcomeIntent.DefaultWelcomeIntent-custom",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "0bfe8ffd-5478-4b63-a436-ed42df85ad58",
+          "required": true,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "I didn\u0027t get your key. Can you please repeat?"
+            },
+            {
+              "lang": "en",
+              "value": "Sorry, I didn\u0027t get your code. Please repeat."
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": [
+            "Awesome! Now I can control your web-page. You can give commands like \"go to videos page\", \"scroll down\", \"narrate\" etc. How can I help you?",
+            "Great, I can control your web-page! You can now give commands like \"read the content\", \"scroll up\" etc. Give it a try.",
+            "Amazing! Now I can control your web-page. You can give commands like \"go to home page\", \"scroll down\" etc. What do you want me to do?"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

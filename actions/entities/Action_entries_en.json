@@ -1,0 +1,17 @@
+[
+  {
+    "value": "pause",
+    "synonyms": [
+      "pause",
+      "stop"
+    ]
+  },
+  {
+    "value": "play",
+    "synonyms": [
+      "play",
+      "resume",
+      "continue"
+    ]
+  }
+]

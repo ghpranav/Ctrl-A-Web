@@ -44,6 +44,24 @@ heroku create
 git push heroku master
 ```
 
+## Deploy Actions
+
+```sh
+git clone https://github.com/ghpranav/Ctrl-A-Web.git
+Create new [Actions On Google](https://console.actions.google.com/) Project
+Click Build your Action to expand the options and select Add Action(s).
+Click Add your first Action.
+On the Custom intent dialog, click Build to launch the Dialogflow console.
+Click Create.
+Click the gear icon on the left navigation.
+Click Export and Import.
+Click Restore From Zip.
+Upload the 'Ctrl-A-Web.zip' file.
+Type "RESTORE" and click the Restore button.
+Click Done.
+Navigate to Fulfillment on the left navigation & replace Webhook URL with your hosted /actions endpoint
+```
+
 ## Author
 
 👤 **ghpranav**

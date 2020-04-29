@@ -1,0 +1,9 @@
+{
+  "id": "26bbf7a3-6bb8-4864-8e08-2cf4e34aa01d",
+  "name": "Key",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "2bc57568-8b82-4a5a-a14a-61bec017236c",
+    "data": [
+      {
+        "text": "Fill the form",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "055bd0d8-8de1-4ded-80b0-554344283a72",
+    "data": [
+      {
+        "text": "Finished",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cfc4f922-0533-4cac-b906-613fe3e23791",
+    "data": [
+      {
+        "text": "Send it",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8ff65b67-8162-4cd4-958f-d1af2bf83f24",
+    "data": [
+      {
+        "text": "Done",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "2c3e9a2d-3948-449c-8279-d0349f72bf47",
+    "data": [
+      {
+        "text": "Message",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "1f5019ea-d93b-42e3-bd41-5d16f7f2603d",
+    "data": [
+      {
+        "text": "Comment",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "ae867b75-45ef-4e7a-86e4-40ce74bdfe9d",
+    "data": [
+      {
+        "text": "Give  feedback",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "cb9bcea4-1e43-4a31-a6e2-b3b0b73ceb72",
+    "data": [
+      {
+        "text": "Write a message",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

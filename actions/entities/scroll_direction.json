@@ -1,0 +1,9 @@
+{
+  "id": "e9b5de52-9cdc-494a-b20b-4cfe900509a8",
+  "name": "scroll_direction",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": true,
+  "allowFuzzyExtraction": false
+}

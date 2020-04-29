@@ -1,0 +1,102 @@
+[
+  {
+    "id": "9247f2d2-213b-4eef-8b81-df9b593a4687",
+    "data": [
+      {
+        "text": "Go ",
+        "userDefined": false
+      },
+      {
+        "text": "down",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "5265f7cb-ad27-498e-94d3-b8e6409679df",
+    "data": [
+      {
+        "text": "Go ",
+        "userDefined": false
+      },
+      {
+        "text": "up",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "09e121a9-50dd-43bc-a7bc-90d80ee395c6",
+    "data": [
+      {
+        "text": "Down",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "8b0b40be-8374-4914-9b86-2882643d9762",
+    "data": [
+      {
+        "text": "Scroll ",
+        "userDefined": false
+      },
+      {
+        "text": "down",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "51a782d8-0bb6-4263-b2a7-38212b68ce3d",
+    "data": [
+      {
+        "text": "Up",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "83aa0f5a-f568-48b9-9766-8ae79cb6ddb9",
+    "data": [
+      {
+        "text": "Scroll ",
+        "userDefined": false
+      },
+      {
+        "text": "up",
+        "alias": "scroll_direction",
+        "meta": "@scroll_direction",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]

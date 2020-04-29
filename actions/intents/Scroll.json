@@ -1,0 +1,52 @@
+{
+  "id": "d2f4955f-1874-4be5-89be-5033d680d530",
+  "name": "Scroll",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "b7b8280e-cefb-4202-bbee-13aca356a3a6",
+          "required": true,
+          "dataType": "@scroll_direction",
+          "name": "scroll_direction",
+          "value": "$scroll_direction",
+          "prompts": [
+            {
+              "lang": "en",
+              "value": "Up or down?"
+            }
+          ],
+          "promptMessages": [],
+          "noMatchPromptMessages": [],
+          "noInputPromptMessages": [],
+          "outputDialogContexts": [],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "condition": "",
+          "speech": "Done! What next?"
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "google": true
+      },
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

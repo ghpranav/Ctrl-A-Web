@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cfb300fb-3444-4709-81b1-c833e9aab996",
+    "data": [
+      {
+        "text": "7526",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "fdb0ede2-9825-4095-b2de-b8a3b3e9bbab",
+    "data": [
+      {
+        "text": "5532",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "97c8ebc6-e4e8-4682-b2c9-622327b88d9c",
+    "data": [
+      {
+        "text": "1234",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "70296b30-36d5-4c2e-81a3-c5979359e838",
+    "data": [
+      {
+        "text": "09628",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  },
+  {
+    "id": "d161a6e6-0420-4bb7-85b1-6feedfaeb8a5",
+    "data": [
+      {
+        "text": "12345",
+        "alias": "number",
+        "meta": "@sys.number",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "updated": 0
+  }
+]
