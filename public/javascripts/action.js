@@ -42,7 +42,7 @@ talkify.config.remoteService.host = "https://talkify.net";
 talkify.config.remoteService.apiKey = "a800fd35-db29-4ef9-997b-cf040b6e5f5d";
 
 talkify.config.ui.audioControls = {
-  enabled: true, //<-- Disable to get the browser built in audio controls
+  enabled: false, //<-- Disable to get the browser built in audio controls
   container: document.getElementById("player-and-voices"),
 };
 
