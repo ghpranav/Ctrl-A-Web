@@ -36,12 +36,20 @@ npm run start
 npm run test
 ```
 
+## Deploy to heroku
+
+```sh
+heroku login
+heroku create
+git push heroku master
+```
+
 ## Author
 
 👤 **ghpranav**
 
-* Github: [@ghpranav](https://github.com/ghpranav)
-* LinkedIn: [@ghpranav](https://linkedin.com/in/ghpranav)
+- Github: [@ghpranav](https://github.com/ghpranav)
+- LinkedIn: [@ghpranav](https://linkedin.com/in/ghpranav)
 
 ## 🤝 Contributing
 
@@ -56,5 +64,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2020 [ghpranav](https://github.com/ghpranav).<br />
 This project is [ISC](https://github.com/ghpranav/Ctrl-A-Web/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
